@@ -1,0 +1,22 @@
+server:
+  port: 28080
+  host: 127.0.0.1
+
+app:
+    greeting: "Hello"
+
+maven:
+  baseDir: ./target/repo
+
+  users:
+    - username: user-01
+      password: password-02
+
+  repositories:
+    - name: test-snapshot
+
+      read:
+        - "user-01"
+
+      full:
+        - "user-01"
