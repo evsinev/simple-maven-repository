@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.helidon.applications</groupId>
         <artifactId>helidon-se</artifactId>
-        <version>4.5.5</version>
+        <version>4.5.6</version>
         <relativePath/>
     </parent>
     <groupId>com.payneteasy</groupId>
@@ -19,9 +19,12 @@
              CVE-2025-11226, CVE-2026-1225, CVE-2026-9828, CVE-2026-10532, CVE-2026-13006,
              CVE-2026-19880, CVE-2026-104721 -->
         <version.lib.logback>1.6.5</version.lib.logback>
-        <!-- Helidon 4.5.5 brings micrometer 1.15.12 (last 1.15.x), still affected by CVE-2026-59296;
+        <!-- Helidon 4.5.6 brings micrometer 1.15.12 (last 1.15.x), still affected by CVE-2026-59296;
              1.16.7 fixes CVE-2026-40984, CVE-2026-59295, CVE-2026-59296 -->
         <version.lib.micrometer>1.16.7</version.lib.micrometer>
+        <!-- Helidon manages micrometer-registry-prometheus(-simpleclient) via a separate property (1.15.12);
+             keep it aligned with the rest of Micrometer -->
+        <version.lib.micrometer-prometheus>${version.lib.micrometer}</version.lib.micrometer-prometheus>
     </properties>
 
     <dependencyManagement>
